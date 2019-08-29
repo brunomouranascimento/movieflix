@@ -9,6 +9,8 @@ import { AuthenticationService } from 'src/app/authentication/authentication.ser
 })
 export class NavbarComponent implements OnInit {
 
+  theme = localStorage.getItem('theme');
+
   constructor(public authenticationService: AuthenticationService) { }
 
   changeTheme(theme: string) {
@@ -17,9 +19,14 @@ export class NavbarComponent implements OnInit {
       classList.remove(classList.item(0));
     }
     document.body.classList.add(`${theme}-theme`);
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', theme);
   }
 
   ngOnInit() {
+    if (this.theme) {
+      this.changeTheme(this.theme);
+    }
   }
 
 }

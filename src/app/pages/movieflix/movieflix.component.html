@@ -1,18 +1,26 @@
 <app-navbar></app-navbar>
 <div class="app-movieflix">
-  <h1 class="app-movieflix_title">Star Wars Library</h1>
-  <hr>
-  <app-card *ngFor="let movie of movies | orderBy: episode_id : false : true">
-    <div class="front">
-      <div class="movie-title">
-        <p>Title: {{ movie.title }}</p>
-      </div>
-      <hr>
-      <p>Release date: {{ movie.release_date | date:'dd/MM/yyyy' }}</p>
+  <h1 class="app-movieflix_title">STAR WARS LIBRARY</h1>
+  <section *ngIf="movies" class="cards">
+    <app-card *ngFor="let movie of movies | orderBy: episode_id : false : true">
+      <div class="front">
+        <div class="movie-title">
+          <h3>{{ movie.title | uppercase }}</h3>
+          <small>{{ movie.director }}</small>
+        </div>
+        <hr>
+        <small><strong>Release date:</strong> {{ movie.release_date | date:'dd/MM/yyyy' }}</small>
+        <br>
+        <small><strong>Produced by: </strong> {{ movie.producer }}</small>
 
-    </div>
-    <div class="back">
-      <p>{{ movie.opening_crawl }}</p>
-    </div>
-  </app-card>
+      </div>
+      <div class="back">
+        <p>{{ movie.opening_crawl }}</p>
+      </div>
+    </app-card>
+  </section>
+  <section *ngIf="!movies" class="loading">
+    <lottie-animation-view [options]="lottieConfig" [width]="300" [height]="600">
+    </lottie-animation-view> 
+  </section>
 </div>

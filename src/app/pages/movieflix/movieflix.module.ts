@@ -7,6 +7,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { MaterialModule } from 'src/app/components/utils/material.module';
 import { MovieflixService } from './movieflix.service';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MovieflixService } from './movieflix.service';
     CommonModule,
     ComponentsModule,
     MaterialModule,
-    OrderModule
+    OrderModule,
+    LottieAnimationViewModule.forRoot()
   ],
   exports: [MovieflixComponent],
   providers: [MovieflixService]

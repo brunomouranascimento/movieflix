@@ -11,15 +11,24 @@
 
   .app-navbar {
     background-color: mat-color($primary);
+    border-bottom: solid 1px darken(mat-color($background, background), 25%);
   }
 
-  .app-card_front, .app-card_back, .mat-snack-bar-container {
-    background-color: mat-color($background, background);
+  body, .app-card_front, .app-card_back, .mat-snack-bar-container {
+    background-color: lighten(mat-color($background, background), 5%);
     color: mat-color($foreground, text);
   }
 
   .app-login_wrapper {
     background-color: mat-color($background, background);
+  }
+
+  .app-movieflix {
+    background-color: mat-color($background, background);
+  }
+
+  .app-movieflix_title {
+    color: mat-color($foreground, text);
   }
 
   .mat-menu-item,
@@ -46,12 +55,12 @@
 }
 
 $default-primary: mat-palette($mat-grey, 900);
-$default-accent: mat-palette($mat-red, A200, A100, A400);
+$default-accent: mat-palette($mat-red, A700, A100, A400);
 $default-warn: mat-palette($mat-deep-orange);
 $default-theme: mat-dark-theme($default-primary, $default-accent, $default-warn);
 
 $light-primary: mat-palette($mat-grey, 200);
-$light-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+$light-accent: mat-palette($mat-blue, A400, A100, A400);
 $light-warn: mat-palette($mat-deep-orange, 500);
 $light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 

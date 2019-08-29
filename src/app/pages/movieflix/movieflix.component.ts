@@ -13,9 +13,20 @@ import { Router } from '@angular/router';
 export class MovieflixComponent implements OnInit {
 
   movies: Movie[];
+  public lottieConfig: Object;
+  private anim: any;
+
+  private animationSpeed = 1;
   episode_id = 'episode_id';
 
-  constructor(private movieflixService: MovieflixService, private router: Router, public dialog: MatDialog) { }
+  constructor(private movieflixService: MovieflixService, private router: Router, public dialog: MatDialog) {
+    this.lottieConfig = {
+      path: '../../../assets/lottie/bb8.json',
+      renderer: 'canvas',
+      autoplay: true,
+      loop: true
+  };
+  }
 
   ngOnInit() {
     this.movieflixService.getMovies().subscribe(data => {
