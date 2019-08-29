@@ -1,0 +1,39 @@
+@import '~src/scss/_mixins.scss';
+
+.app-movieflix {
+  padding-top: 55px;
+  background-color: #DADCDE;
+
+  .app-movieflix_title {
+    text-align: center;
+  }
+
+  .front,
+  .back {
+    padding: 15px;
+  }
+
+  .mat-fab {
+    position: fixed;
+    bottom: 10%;
+    right: 4%;
+    opacity: 0.6;
+    transition: all ease .2s;
+
+    @include device(smartphone) {
+      bottom: 4%;
+      right: 8%;
+      opacity: 1;
+    }
+
+    @include device(smartphone-landscape) {
+      bottom: 11%;
+      right: 5%;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
