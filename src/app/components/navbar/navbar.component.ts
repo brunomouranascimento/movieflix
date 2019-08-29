@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     }
     document.body.classList.add(`${theme}-theme`);
   }
-  
+
   ngOnInit() {
   }
 

@@ -19,7 +19,7 @@ export class MovieflixComponent implements OnInit {
 
   ngOnInit() {
     this.movieflixService.getMovies().subscribe(data => {
-      this.movies = data['results'] as Movie[];
+      this.movies = data.results as Movie[];
       console.log(data);
     });
   }

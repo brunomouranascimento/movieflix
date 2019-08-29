@@ -1,4 +1,5 @@
 export class Movie {
+  results: Movie[];
   characters: string[];
   created: string;
   director: string;
@@ -14,7 +15,7 @@ export class Movie {
   url: string;
   vehicles: string[];
 
-    constructor(values: object = {}) {
-      Object.assign(this, values);
-    }
+  constructor(values: object = {}) {
+    Object.assign(this, values);
+  }
 }
