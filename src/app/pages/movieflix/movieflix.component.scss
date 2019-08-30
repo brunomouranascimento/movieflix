@@ -1,47 +1,62 @@
 @import '~src/scss/_mixins.scss';
 
 .app-movieflix {
-  height: 100vh;
   padding-top: 55px;
 
   .app-movieflix_title {
     text-align: center;
+    margin-top: 15px;
+  }
+
+  section {
+    .loading-message {
+      text-align: center;
+      font-size: 22px;
+    }
   }
 
   .front,
   .back {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .opening_crawl {
+      text-align: justify;
+      margin-top: 0;
+    }
+
+    .info-wrapper {
+      align-items: self-start;
+      width: 100%;
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; 
+      }
+    }
 
     .movie-title {
       font-weight: bold;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      h3 {
-        margin-bottom: 0;
+      h1 {
+        margin: 0;
       }
     }
-  }
 
-  .mat-fab {
-    position: fixed;
-    bottom: 10%;
-    right: 4%;
-    opacity: 0.6;
-    transition: all ease .2s;
+    small {
+      font-size: 12px;
+      text-align: center;
 
-    @include device(smartphone) {
-      bottom: 4%;
-      right: 8%;
-      opacity: 1;
-    }
-
-    @include device(smartphone-landscape) {
-      bottom: 11%;
-      right: 5%;
-      opacity: 1;
-    }
-
-    &:hover {
-      opacity: 1;
+      &:first-of-type {
+        margin-top: 8px;
+      }
     }
   }
 }

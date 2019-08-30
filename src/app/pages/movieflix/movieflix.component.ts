@@ -25,7 +25,11 @@ export class MovieflixComponent implements OnInit {
       renderer: 'canvas',
       autoplay: true,
       loop: true
-  };
+    };
+  }
+
+  getPoster(filmID: number) {
+    return `../../../assets/images/${filmID}.jpg`;
   }
 
   ngOnInit() {

@@ -24,8 +24,8 @@
                         <span>Themes</span>
                     </button>
                     <mat-menu #themes="matMenu">
-                        <button mat-menu-item (click)="changeTheme('light')">Light Side</button>
-                        <button mat-menu-item (click)="changeTheme('default')">Dark Side</button>
+                        <button mat-menu-item (click)="changeTheme('light')"><i class="fas fa-jedi"></i>  Light Side</button>
+                        <button mat-menu-item (click)="changeTheme('default')"><i class="fab fa-sith"></i>  Dark Side</button>
                     </mat-menu>
                     <button mat-menu-item (click)="authenticationService.logout()">
                         <mat-icon>power_settings_new</mat-icon>

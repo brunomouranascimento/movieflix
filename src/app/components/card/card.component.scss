@@ -2,11 +2,10 @@
 
 .app-card {
   display: inline-block;
-  height: 600px;
-  width: 440px;
+  height: 565px;
+  width: 345px;
   margin: 1rem;
   position: relative;
-  margin-bottom: 21px;
   perspective: 1000px;
   transform-style: preserve-3d;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -41,9 +40,10 @@
     backface-visibility: hidden;
 
     button {
+      position: absolute;
       float: right;
-      right: 10px;
-      top: 10px;
+      right: 15px;
+      bottom: 15px;
     }
   }
 }

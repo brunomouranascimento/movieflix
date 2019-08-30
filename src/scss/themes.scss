@@ -25,6 +25,11 @@
 
   .app-movieflix {
     background-color: mat-color($background, background);
+    section {
+      p {
+        color: mat-color($foreground, text);
+      }
+    }
   }
 
   .app-movieflix_title {

@@ -5,22 +5,31 @@
     <app-card *ngFor="let movie of movies | orderBy: episode_id : false : true">
       <div class="front">
         <div class="movie-title">
-          <h3>{{ movie.title | uppercase }}</h3>
+          <h1>{{ movie.title | uppercase }}</h1>
           <small>{{ movie.director }}</small>
         </div>
-        <hr>
-        <small><strong>Release date:</strong> {{ movie.release_date | date:'dd/MM/yyyy' }}</small>
-        <br>
+        <img [src]="getPoster(movie.episode_id)" [height]="400" alt="movie poster">
         <small><strong>Produced by: </strong> {{ movie.producer }}</small>
-
+        <small><strong>Release date:</strong> {{ movie.release_date | date:'dd/MM/yyyy' }}</small>
       </div>
       <div class="back">
-        <p>{{ movie.opening_crawl }}</p>
+        <h3>OPENING CRAWL</h3>
+        <p class="opening_crawl">{{ movie.opening_crawl }}</p>
+        <div class="info-wrapper">
+          <ul>
+            <li><i class="fas fa-user-friends"></i> {{ movie.characters.length }} CHARACTERS</li>
+            <li><i class="fas fa-space-shuttle"></i> {{ movie.starships.length }} STARSHIPS</li>
+            <li><i class="fas fa-globe-europe"></i> {{ movie.planets.length }} PLANETS</li>
+            <li><i class="fab fa-optin-monster"></i> {{ movie.species.length }} SPECIES</li>
+            <li><i class="fab fa-galactic-senate"></i> {{ movie.vehicles.length }} VEHICLES</li>
+          </ul>
+        </div>
       </div>
     </app-card>
   </section>
   <section *ngIf="!movies" class="loading">
     <lottie-animation-view [options]="lottieConfig" [width]="300" [height]="600">
-    </lottie-animation-view> 
+    </lottie-animation-view>
+    <p class="loading-message">Loading movies, please wait...</p>
   </section>
 </div>

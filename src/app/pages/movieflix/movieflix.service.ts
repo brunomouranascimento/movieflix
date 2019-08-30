@@ -15,7 +15,7 @@ export class MovieflixService {
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<Movie> {
-    return this.http.get<Movie>(`${BASE_URL}/api/filmss/`);
+    return this.http.get<Movie>(`${BASE_URL}/api/films/`);
   }
 
   getMovie(movie: number): Observable<Movie> {
