@@ -1,6 +1,6 @@
 @mixin device($size) {
   @if $size == smartphone {
-    @media only screen and (max-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) { @content; }
+    @media only screen and (max-width: 667px) { @content; }
   } @else if $size == smartphone-landscape {
     @media only screen and (min-width: 375px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) { @content; }
   } @else if $size == big-smartphone {
