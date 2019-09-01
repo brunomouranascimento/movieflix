@@ -17,8 +17,4 @@ export class MovieflixService {
   getMovies(): Observable<Movie> {
     return this.http.get<Movie>(`${BASE_URL}/api/films/`);
   }
-
-  getMovie(movie: number): Observable<Movie> {
-    return this.http.get<Movie>(`${BASE_URL}/api/films/${movie}`);
-  }
 }

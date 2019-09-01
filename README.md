@@ -1,27 +1,37 @@
 # Movieflix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+Movieflix is a web application that uses https://swapi.co/ to retrive Star Wars movies data. 
 
-## Development server
+## Features
 
+- Angular 8 (components, routes, modules, services, guards, models);
+- RxJS;
+- Angular Material;
+- Bootstrap 4;
+- SASS;
+- Firebase hosting: https://movieflixstarwars.firebaseapp.com/
+
+### Running the application
+
+To run the application uou need to install Node.js on your machine check this guide [here](https://nodejs.org/en/).
+First git clone the repo, then go to directory and run `npm install` to install dev and prod dependencies.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+```sh
+$ cd movieflix
+$ npm install
+$ ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Unit test
 
-## Build
+To execute unit tests, go to directory that you clonned early and run `ng test` to start Karma and the tests will execeute automatically.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+$ cd movieflix
+$ ng test
+```
 
-## Running unit tests
+### Kwnown Issues
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [SWAPI](https://swapi.co/) returns each movie data individually, but all the characters, starships, planets, species and vehicles must be retrieved individually, with no movie-correlation. E.G: "The phantom menace" has 34 characters, and to show his names must be necessary 34 calls to the API, and it could be very "laggy". For future versions I could include a lazy load module to retrive complete data for each movie;
