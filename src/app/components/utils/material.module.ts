@@ -11,9 +11,7 @@ import { CommonModule } from '@angular/common';
     Material.MatListModule,
     Material.MatMenuModule,
     Material.MatFormFieldModule,
-    Material.MatInputModule,
-    Material.MatDialogModule,
-    Material.MatSnackBarModule
+    Material.MatInputModule
   ],
   exports: [
     Material.MatTooltipModule,
@@ -22,9 +20,7 @@ import { CommonModule } from '@angular/common';
     Material.MatListModule,
     Material.MatMenuModule,
     Material.MatFormFieldModule,
-    Material.MatInputModule,
-    Material.MatDialogModule,
-    Material.MatSnackBarModule
+    Material.MatInputModule
   ],
   declarations: [],
   providers: []

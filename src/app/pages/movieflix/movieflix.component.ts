@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
 
 import { Movie } from 'src/app/models/movie';
 import { MovieflixService } from './movieflix.service';
@@ -13,13 +12,13 @@ import { Router } from '@angular/router';
 export class MovieflixComponent implements OnInit {
 
   movies: Movie[];
-  public lottieConfig: Object;
+  public lottieConfig: object;
   private anim: any;
 
   private animationSpeed = 1;
   episode_id = 'episode_id';
 
-  constructor(private movieflixService: MovieflixService, private router: Router, public dialog: MatDialog) {
+  constructor(private movieflixService: MovieflixService, private router: Router) {
     this.lottieConfig = {
       path: '../../../assets/lottie/bb8.json',
       renderer: 'canvas',
@@ -35,7 +34,6 @@ export class MovieflixComponent implements OnInit {
   ngOnInit() {
     this.movieflixService.getMovies().subscribe(data => {
       this.movies = data.results as Movie[];
-      console.log(data);
     });
   }
 

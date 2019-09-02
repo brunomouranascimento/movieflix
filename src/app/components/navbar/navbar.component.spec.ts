@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './navbar.component';
+import { MaterialModule } from '../utils/material.module';
+import { AppRoutingModule } from './../../app-routing.module';
+import { AuthenticationService } from './../../authentication/authentication.service';
+import { MovieflixComponent } from './../../pages/movieflix/movieflix.component';
+import { LoginComponent } from './../../pages/login/login.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { CardComponent } from './../card/card.component';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +17,9 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      imports: [ MaterialModule, ReactiveFormsModule, AppRoutingModule, OrderModule, LottieAnimationViewModule.forRoot() ],
+      declarations: [ NavbarComponent, MovieflixComponent, LoginComponent, CardComponent ],
+      providers: [ AuthenticationService ]
     })
     .compileComponents();
   }));
