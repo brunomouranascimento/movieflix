@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./movieflix.component.scss']
 })
 export class MovieflixComponent implements OnInit {
-
   movies: Movie[];
   public lottieConfig: object;
   private anim: any;
@@ -18,7 +17,10 @@ export class MovieflixComponent implements OnInit {
   private animationSpeed = 1;
   episode_id = 'episode_id';
 
-  constructor(private movieflixService: MovieflixService, private router: Router) {
+  constructor(
+    private movieflixService: MovieflixService,
+    private router: Router
+  ) {
     this.lottieConfig = {
       path: '../../../assets/lottie/bb8.json',
       renderer: 'canvas',
@@ -36,5 +38,4 @@ export class MovieflixComponent implements OnInit {
       this.movies = data.results as Movie[];
     });
   }
-
 }

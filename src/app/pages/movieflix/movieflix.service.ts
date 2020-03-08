@@ -11,8 +11,7 @@ const BASE_URL = environment.baseUrl;
   providedIn: 'root'
 })
 export class MovieflixService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getMovies(): Observable<Movie> {
     return this.http.get<Movie>(`${BASE_URL}/api/films/`);

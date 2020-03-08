@@ -10,11 +10,13 @@ import { AuthenticationService } from 'src/app/authentication/authentication.ser
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   isShowLogin$: Observable<boolean>;
   loginForm: FormGroup;
 
-  constructor(public authenticationService: AuthenticationService, private formBuilder: FormBuilder) { }
+  constructor(
+    public authenticationService: AuthenticationService,
+    private formBuilder: FormBuilder
+  ) {}
 
   onLogin() {
     if (this.loginForm.valid) {

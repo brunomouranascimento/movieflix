@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
   flipped: boolean;
 
-  constructor() { }
+  constructor() {}
 
   flipCard() {
     this.flipped = !this.flipped;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

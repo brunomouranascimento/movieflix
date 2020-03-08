@@ -8,10 +8,9 @@ import { AuthenticationService } from 'src/app/authentication/authentication.ser
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   theme = localStorage.getItem('theme');
 
-  constructor(public authenticationService: AuthenticationService) { }
+  constructor(public authenticationService: AuthenticationService) {}
 
   changeTheme(theme: string) {
     const classList = document.body.classList;
@@ -28,5 +27,4 @@ export class NavbarComponent implements OnInit {
       this.changeTheme(this.theme);
     }
   }
-
 }

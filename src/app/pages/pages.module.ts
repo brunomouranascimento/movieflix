@@ -8,7 +8,6 @@ import { MovieflixModule } from './movieflix/movieflix.module';
 
 import { LoginComponent } from './login/login.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -18,8 +17,6 @@ import { LoginComponent } from './login/login.component';
     MovieflixModule
   ],
   exports: [],
-  declarations: [
-    LoginComponent
-  ]
+  declarations: [LoginComponent]
 })
-export class PagesModule { }
+export class PagesModule {}

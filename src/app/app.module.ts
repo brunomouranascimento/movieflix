@@ -13,9 +13,7 @@ import { AuthenticationService } from './authentication/authentication.service';
 import { AuthenticationGuard } from './authentication/authentication.guard';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -27,4 +25,4 @@ import { AuthenticationGuard } from './authentication/authentication.guard';
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

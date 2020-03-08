@@ -9,7 +9,6 @@ import { MaterialModule } from 'src/app/components/utils/material.module';
 import { MovieflixService } from './movieflix.service';
 import { LottieAnimationViewModule } from 'ng-lottie';
 
-
 @NgModule({
   declarations: [MovieflixComponent],
   imports: [
@@ -22,4 +21,4 @@ import { LottieAnimationViewModule } from 'ng-lottie';
   exports: [MovieflixComponent],
   providers: [MovieflixService]
 })
-export class MovieflixModule { }
+export class MovieflixModule {}
